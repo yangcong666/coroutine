@@ -1,47 +1,47 @@
-#ifndef  COROUTINE_H
+ï»¿#ifndef  COROUTINE_H
 
 #define  COROUTINE_H_
-#define  DEFAULT_STACK_SIZE 1024*1024  //»º´æÕ»´óĞ¡
+#define  DEFAULT_STACK_SIZE 1024*1024  //ç¼“å­˜æ ˆå¤§å°
 #define  _XOPEN_SOURCE
 
 #include  <stdio.h>
 #include  <string.h>
 #include  <ucontext.h>
 
-// ×´Ì¬Âë ¿ÕÏĞ¡¢ÔËĞĞ¡¢ÔİÍ£
+// çŠ¶æ€ç  ç©ºé—²ã€è¿è¡Œã€æš‚åœ
 enum Costate { FREE = 0, RUNNING = 1, SUSPEND = 2 }
 
-// Ğ­³ÌÀà
+// åç¨‹ç±»
 class Coroutine
 {
 public:
 	Coroutine();
 	virtual ~Coroutine();
 
-	// ÓÃ»§Ğ­³ÌÈë¿Úº¯Êı
+	// ç”¨æˆ·åç¨‹å…¥å£å‡½æ•°
 	virtual void CoProcess();
 
-	// ÓÃ»§Ğ­³Ì»Ö¸´º¯Êı
+	// ç”¨æˆ·åç¨‹æ¢å¤å‡½æ•°
 	void Resume();
 
-	// »ñÈ¡Ğ­³ÌID
+	// è·å–åç¨‹ID
 	int GetId() const {
 		return _id;
 	}
 
-	// ÉèÖÃĞ­³ÌId
+	// è®¾ç½®åç¨‹Id
 	void SetId(int id)
 	{
 		_id = id;
 	}
 
-	// »ñÈ¡Ğ­³Ì×´Ì¬
+	// è·å–åç¨‹çŠ¶æ€
 	int GetState() const
 	{
 		return state;
 	}
 
-	// ÉèÖÃĞ­³Ì×´Ì¬
+	// è®¾ç½®åç¨‹çŠ¶æ€
 	void SetState(CoState state)
 	{
 		_state = state;
@@ -49,17 +49,18 @@ public:
 
 protected:
 
-	// ÓÃ»§Ğ­³Ì¹ÒÆğ
+	// ç”¨æˆ·åç¨‹æŒ‚èµ·
 	void Yield();
 
-	// ¶ÑÕ»»º´æ
+
+	// å †æ ˆç¼“å­˜
 	void SaveStack();
 
-	// ¶ÑÕ»»Ö¸´
+	// å †æ ˆæ¢å¤
 	void ReloadStack();
 
 public:
-	char* buffer;        // »º´æ
+	char* buffer;        // ç¼“å­˜
 	ucontext_t ucp;
 private:
 	int _stack_size;
