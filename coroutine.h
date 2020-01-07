@@ -10,7 +10,7 @@
 #include  <memory>
 
 // 状态码 空闲、运行、暂停
-enum Costate { FREE = 0, RUNNING = 1, SUSPEND = 2 }
+enum Costate { FREE = 0, RUNNING = 1, SUSPEND = 2 };
 
 // 协程类
 class Coroutine
