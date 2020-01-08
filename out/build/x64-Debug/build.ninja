@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Project
+# Project: coroutine
 # Configuration: Debug
 # =============================================================================
 
@@ -31,17 +31,6 @@ include rules.ninja
 
 
 #############################################
-# Utility command for edit_cache
-
-build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Administrator\source\repos\yangcong666\coroutine\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build edit_cache: phony CMakeFiles\edit_cache.util
-
-
-#############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
@@ -53,7 +42,120 @@ build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target COROUTINE_LIB
+
+
+#############################################
+# Order-only phony target for COROUTINE_LIB
+
+build cmake_object_order_depends_target_COROUTINE_LIB: phony || CMakeFiles\COROUTINE_LIB.dir
+
+build CMakeFiles\COROUTINE_LIB.dir\main.cpp.obj: CXX_COMPILER__COROUTINE_LIB ..\..\..\main.cpp || cmake_object_order_depends_target_COROUTINE_LIB
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++11 -W -Wall -Wextra -O3 /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = CMakeFiles\COROUTINE_LIB.dir
+  OBJECT_FILE_DIR = CMakeFiles\COROUTINE_LIB.dir
+  TARGET_COMPILE_PDB = CMakeFiles\COROUTINE_LIB.dir\COROUTINE_LIB.pdb
+  TARGET_PDB = COROUTINE_LIB.pdb
+
+build CMakeFiles\COROUTINE_LIB.dir\coroutine.cpp.obj: CXX_COMPILER__COROUTINE_LIB ..\..\..\coroutine.cpp || cmake_object_order_depends_target_COROUTINE_LIB
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++11 -W -Wall -Wextra -O3 /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = CMakeFiles\COROUTINE_LIB.dir
+  OBJECT_FILE_DIR = CMakeFiles\COROUTINE_LIB.dir
+  TARGET_COMPILE_PDB = CMakeFiles\COROUTINE_LIB.dir\COROUTINE_LIB.pdb
+  TARGET_PDB = COROUTINE_LIB.pdb
+
+build CMakeFiles\COROUTINE_LIB.dir\schedule.cpp.obj: CXX_COMPILER__COROUTINE_LIB ..\..\..\schedule.cpp || cmake_object_order_depends_target_COROUTINE_LIB
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++11 -W -Wall -Wextra -O3 /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = CMakeFiles\COROUTINE_LIB.dir
+  OBJECT_FILE_DIR = CMakeFiles\COROUTINE_LIB.dir
+  TARGET_COMPILE_PDB = CMakeFiles\COROUTINE_LIB.dir\COROUTINE_LIB.pdb
+  TARGET_PDB = COROUTINE_LIB.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target COROUTINE_LIB
+
+
+#############################################
+# Link the static library COROUTINE_LIB.lib
+
+build COROUTINE_LIB.lib: CXX_STATIC_LIBRARY_LINKER__COROUTINE_LIB CMakeFiles\COROUTINE_LIB.dir\main.cpp.obj CMakeFiles\COROUTINE_LIB.dir\coroutine.cpp.obj CMakeFiles\COROUTINE_LIB.dir\schedule.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++11 -W -Wall -Wextra -O3 /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = CMakeFiles\COROUTINE_LIB.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\COROUTINE_LIB.dir\COROUTINE_LIB.pdb
+  TARGET_FILE = COROUTINE_LIB.lib
+  TARGET_PDB = COROUTINE_LIB.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target maintest
+
+
+#############################################
+# Order-only phony target for maintest
+
+build cmake_object_order_depends_target_maintest: phony || cmake_object_order_depends_target_COROUTINE_LIB
+
+build CMakeFiles\maintest.dir\main.cpp.obj: CXX_COMPILER__maintest ..\..\..\main.cpp || cmake_object_order_depends_target_maintest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++11 -W -Wall -Wextra -O3 /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = CMakeFiles\maintest.dir
+  OBJECT_FILE_DIR = CMakeFiles\maintest.dir
+  TARGET_COMPILE_PDB = CMakeFiles\maintest.dir\
+  TARGET_PDB = maintest.pdb
+
+build CMakeFiles\maintest.dir\coroutine.cpp.obj: CXX_COMPILER__maintest ..\..\..\coroutine.cpp || cmake_object_order_depends_target_maintest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++11 -W -Wall -Wextra -O3 /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = CMakeFiles\maintest.dir
+  OBJECT_FILE_DIR = CMakeFiles\maintest.dir
+  TARGET_COMPILE_PDB = CMakeFiles\maintest.dir\
+  TARGET_PDB = maintest.pdb
+
+build CMakeFiles\maintest.dir\schedule.cpp.obj: CXX_COMPILER__maintest ..\..\..\schedule.cpp || cmake_object_order_depends_target_maintest
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++11 -W -Wall -Wextra -O3 /MDd /Zi /Ob0 /Od /RTC1
+  OBJECT_DIR = CMakeFiles\maintest.dir
+  OBJECT_FILE_DIR = CMakeFiles\maintest.dir
+  TARGET_COMPILE_PDB = CMakeFiles\maintest.dir\
+  TARGET_PDB = maintest.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target maintest
+
+
+#############################################
+# Link the executable maintest.exe
+
+build maintest.exe: CXX_EXECUTABLE_LINKER__maintest CMakeFiles\maintest.dir\main.cpp.obj CMakeFiles\maintest.dir\coroutine.cpp.obj CMakeFiles\maintest.dir\schedule.cpp.obj | COROUTINE_LIB.lib || COROUTINE_LIB.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -std=c++11 -W -Wall -Wextra -O3 /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = COROUTINE_LIB.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\maintest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\maintest.dir\
+  TARGET_FILE = maintest.exe
+  TARGET_IMPLIB = maintest.lib
+  TARGET_PDB = maintest.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\Administrator\source\repos\yangcong666\coroutine\out\build\x64-Debug && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles\edit_cache.util
+
+# =============================================================================
 # Target aliases.
+
+build COROUTINE_LIB: phony COROUTINE_LIB.lib
+
+build maintest: phony maintest.exe
 
 # =============================================================================
 # Folder targets.
@@ -70,7 +172,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 #############################################
 # The main all target.
 
-build all: phony
+build all: phony COROUTINE_LIB.lib maintest.exe
 
 
 #############################################

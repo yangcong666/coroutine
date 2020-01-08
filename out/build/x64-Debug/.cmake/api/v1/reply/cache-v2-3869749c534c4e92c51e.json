@@ -695,7 +695,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Project"
+			"value" : "coroutine"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -1039,6 +1039,54 @@
 		},
 		{
 			"name" : "Project_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Administrator/source/repos/yangcong666/coroutine"
+		},
+		{
+			"name" : "coroutine_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Administrator/source/repos/yangcong666/coroutine/out/build/x64-Debug"
+		},
+		{
+			"name" : "coroutine_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Administrator/source/repos/yangcong666/coroutine"
+		},
+		{
+			"name" : "simlib_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/Administrator/source/repos/yangcong666/coroutine/out/build/x64-Debug"
+		},
+		{
+			"name" : "simlib_SOURCE_DIR",
 			"properties" : 
 			[
 				{

@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "coroutine",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "COROUTINE_LIB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-COROUTINE_LIB-Debug-d7ed312630965f5ecaec.json",
+					"name" : "COROUTINE_LIB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "maintest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-maintest-Debug-2a83a634aa6e0ae1518f.json",
+					"name" : "maintest",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Administrator/source/repos/yangcong666/coroutine/out/build/x64-Debug",
+		"source" : "C:/Users/Administrator/source/repos/yangcong666/coroutine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
