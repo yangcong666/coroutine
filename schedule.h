@@ -10,7 +10,7 @@
 #include  "singleton.h"
 
 /*
-Ğ­³Ìµ÷¶ÈÀàÊµÏÖ
+åç¨‹è°ƒåº¦ç±»å®ç°
 */
 
 typedef std::map<int, Coroutine*> CrtMap;
@@ -20,31 +20,31 @@ public:
 	Schedule();
 	virtual ~Schedule();
 
-	// ÓÃ»§Ğ­³ÌÈë¿Úº¯Êı
+	// ç”¨æˆ·åç¨‹å…¥å£å‡½æ•°
 	static void coroutineEntry(Coroutine* crt);
 
-	// ½«Ğ­³Ì¼ÓÈëĞ­³Ì³Ø£¬²¢¿ªÆôĞ­³Ì
+	// å°†åç¨‹åŠ å…¥åç¨‹æ± ï¼Œå¹¶å¼€å¯åç¨‹
 	void coroutineNew(Coroutine* crt);
 
-	// »Ö¸´ÓÃ»§Ğ­³Ì
+	// æ¢å¤ç”¨æˆ·åç¨‹
 	void Resume(int id);
 
-	// ÅĞ¶ÏĞ­³Ì³ØÀïÊÇ·ñ»¹ÓĞÎ´Íê³ÉµÄĞ­³Ì£¬
-	// ²¢½«ÒÑ¾­ÖÕÖ¹µÄĞ­³ÌÉ¾³ı
+	// åˆ¤æ–­åç¨‹æ± é‡Œæ˜¯å¦è¿˜æœ‰æœªå®Œæˆçš„åç¨‹ï¼Œ
+	// å¹¶å°†å·²ç»ç»ˆæ­¢çš„åç¨‹åˆ é™¤
 	int HasCoroutine();
 
-	// Í¨¹ıĞ­³ÌidÉ¾³ıĞ­³Ì
+	// é€šè¿‡åç¨‹idåˆ é™¤åç¨‹
 	void Remove(int id);
 
-	// »ñÈ¡Õ»µ×
+	// è·å–æ ˆåº•
 	char* GetStackBottom()
 	{
 		return stack + DEFAULT_STACK_SIZE;
 	}
 
 public:
-	ucontext_t mainCtx;//Ö÷Ïß³ÌÉÏÏÂÎÄĞÅÏ¢
-    char stack[DEFAULT_STACK_SIZE];  //Ğ­³Ì¶ÑÕ»
+	ucontext_t mainCtx;//ä¸»çº¿ç¨‹ä¸Šä¸‹æ–‡ä¿¡æ¯
+    char stack[DEFAULT_STACK_SIZE];  //åç¨‹å †æ ˆ
 
 private:
 	CrtMap crtPool;
