@@ -17,7 +17,9 @@ class Coroutine
 {
 public:
 	Coroutine();
-	virtual ~Coroutine() {};
+	virtual ~Coroutine() {
+		delete buffer;
+	};
 
 	// 用户协程入口函数
 	virtual void CoProcess();
@@ -39,11 +41,11 @@ public:
 	// 获取协程状态
 	int GetState() const
 	{
-		return state;
+		return _state;
 	}
 
 	// 设置协程状态
-	void SetState(CoState state)
+	void SetState(Costate state)
 	{
 		_state = state;
 	}
@@ -61,7 +63,7 @@ protected:
 	void ReloadStack();
 
 public:
-	std::shared_ptr<char *> buffer;        // 缓存
+	char * buffer;        // 缓存
 	ucontext_t ctx;
 private:
 	int _stack_size;

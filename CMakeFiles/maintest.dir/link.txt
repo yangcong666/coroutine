@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -W -Wall -Wextra -O3  -rdynamic CMakeFiles/maintest.dir/main.cpp.o CMakeFiles/maintest.dir/coroutine.cpp.o CMakeFiles/maintest.dir/schedule.cpp.o  -o maintest libCOROUTINE_LIB.a 

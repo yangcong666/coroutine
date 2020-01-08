@@ -13,7 +13,7 @@ public:
 		{
 			flag_instance = new Singleton();
 		}
-		return &flag_instance->_instance;
+		return &(flag_instance->_instance);
 	}
 
 protected:

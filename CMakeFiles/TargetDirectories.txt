@@ -1,0 +1,4 @@
+/root/githubfile/coroutine/CMakeFiles/edit_cache.dir
+/root/githubfile/coroutine/CMakeFiles/rebuild_cache.dir
+/root/githubfile/coroutine/CMakeFiles/maintest.dir
+/root/githubfile/coroutine/CMakeFiles/COROUTINE_LIB.dir

@@ -43,7 +43,7 @@ void Schedule::coroutineNew(Coroutine* crt)
 	swapcontext(&mainCtx, &crt->ctx);
 }
 
-void Schedule::Resume()
+void Schedule::Resume(int id)
 {
 	if (crtPool[id] != nullptr)
 	{
@@ -51,7 +51,7 @@ void Schedule::Resume()
 	}
 }
 
-void Schedule::HasCoroutine()
+int Schedule::HasCoroutine()
 {
 	int count = 0;
 	CrtMap::iterator it;

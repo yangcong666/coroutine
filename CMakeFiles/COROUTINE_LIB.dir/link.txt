@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCOROUTINE_LIB.a  CMakeFiles/COROUTINE_LIB.dir/main.cpp.o CMakeFiles/COROUTINE_LIB.dir/coroutine.cpp.o CMakeFiles/COROUTINE_LIB.dir/schedule.cpp.o
+/usr/bin/ranlib libCOROUTINE_LIB.a

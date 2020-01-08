@@ -16,11 +16,12 @@
 typedef std::map<int, Coroutine*> CrtMap;
 class Schedule
 {
+public:
 	Schedule();
 	virtual ~Schedule();
 
 	// 用户协程入口函数
-	static void coroutineEntry(void* crt);
+	static void coroutineEntry(Coroutine* crt);
 
 	// 将协程加入协程池，并开启协程
 	void coroutineNew(Coroutine* crt);
