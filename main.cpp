@@ -8,11 +8,11 @@ class Logic1 :public Coroutine
 {
 	void CoProcess()
 	{
-		puts("1");
+		puts("ctr1");
 		Yield();
-		puts("2");
+		puts("ctr2");
 		Yield();
-		puts("3");
+		puts("ctr3");
 	}
 };
 
@@ -20,11 +20,11 @@ class Logic2 :public Coroutine
 {
 	void CoProcess()
 	{
-		puts("4");
+		puts("ctr4");
 		Yield();
-		puts("5");
+		puts("ctr5");
 		Yield();
-		puts("6");
+		puts("ctr6");
 	}
 };
 
@@ -32,11 +32,11 @@ class Logic3 :public Coroutine
 {
 	void CoProcess()
 	{
-		puts("7");
+		puts("ctr7");
 		Yield();
-		puts("8");
+		puts("ctr8");
 		Yield();
-		puts("9");
+		puts("ctr9");
 	}
 };
 
