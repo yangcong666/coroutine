@@ -6,7 +6,7 @@ class Singleton
 {
 public:
 
-	// µ¥Àı»ñÈ¡
+	// å•ä¾‹è·å–
 	static T* GetInst()
 	{
 		if (!flag_instance)
@@ -18,15 +18,15 @@ public:
 
 protected:
 
-	// µ¥Àı¹¹Ôì
+	// å•ä¾‹æ„é€ 
 	Singleton() {};
 
 private:
 
-	// ¶ÔÏóÊµÀı
+	// å¯¹è±¡å®ä¾‹
 	T _instance;
 
-	// µ¥ÀıÄ£°åÊµÀı
+	// å•ä¾‹æ¨¡æ¿å®ä¾‹
 	static Singleton<T>* flag_instance;
 
 

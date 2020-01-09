@@ -31,7 +31,7 @@ void Schedule::coroutineNew(Coroutine* crt)
 		crtPool.erase(it);
 	}
 
-	// ¹¹½¨ÓÃ»§Ð­³ÌÉÏÏÂÎÄ
+	// æž„å»ºç”¨æˆ·åç¨‹ä¸Šä¸‹æ–‡
 	getcontext(&(crt->ctx));
 	crt->ctx.uc_stack.ss_sp = stack;
 	crt->ctx.uc_stack.ss_size = DEFAULT_STACK_SIZE;
